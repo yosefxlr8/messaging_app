@@ -5,8 +5,8 @@ my_socket.connect((socket.gethostname(), 1234))
 
 while True:
     data = my_socket.recv(1024)
-    print(data.decode('utf-8'), end='')
-    msg = input('\nYou: ')
+    print(data.decode('utf-8'))
+    msg = input('You: ')
     if msg == '__done__':
         break
     my_socket.send(msg.encode('utf-8'))
